@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exocad Works</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('img/5375330242039770483_121.jpg');
+            background-size: 150%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                background-image: url('img/5375330242039770486_121.jpg');
+                background-size: 120%;
+            }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-button:hover {
+            background-color: rgba(85, 85, 85, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back</a>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770460_121.jpg" alt="Exocad work 1">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770456_121.jpg" alt="Exocad work 2">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770447_121.jpg" alt="Exocad work 3">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770449_121.jpg" alt="Exocad work 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770465_121.jpg" alt="Exocad work 5">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770421_121.jpg" alt="Exocad work 6">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770455_121.jpg" alt="Exocad work 7">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770457_121.jpg" alt="Exocad work 8">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770454_121.jpg" alt="Exocad work 9">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770444_121.jpg" alt="Exocad work 10">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770451_121.jpg" alt="Exocad work 11">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770438_121.jpg" alt="Exocad work 12">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770439_121.jpg" alt="Exocad work 13">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770467_121.jpg" alt="Exocad work 14">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770464_121.jpg" alt="Exocad work 15">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770459_121.jpg" alt="Exocad work 16">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770441_121.jpg" alt="Exocad work 17">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770452_121.jpg" alt="Exocad work 18">
+        </div>
+        <div class="gallery-item">
+            <img src="img/exocad/5375330242039770453_121.jpg" alt="Exocad work 19">
+        </div>
+    </div>
+</body>
+</html>

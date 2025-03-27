@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthodontics Works</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('img/5375330242039770483_121.jpg');
+            background-size: 150%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                background-image: url('img/5375330242039770486_121.jpg');
+                background-size: 120%;
+            }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-button:hover {
+            background-color: rgba(85, 85, 85, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back</a>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770382_121.jpg" alt="Purple orthodontic plate with model">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770385_121.jpg" alt="Purple orthodontic plate">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770408_121.jpg" alt="Pink-blue gradient orthodontic plate with model">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770409_121.jpg" alt="Pink-blue gradient orthodontic plate front view">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770422_121.jpg" alt="Pink-blue gradient orthodontic plate">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770430_121.jpg" alt="Pink-blue gradient orthodontic plates in hand">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770434_121.jpg" alt="Pink-blue gradient orthodontic plate side view">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770437_121.jpg" alt="Pink orthodontic plate with model">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770440_121.jpg" alt="Pink orthodontic plate in sunlight">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770442_121.jpg" alt="Red-green gradient orthodontic plate close-up">
+        </div>
+     
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770390_121.jpg" alt="Blue orthodontic plate 1">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770391_121.jpg" alt="Blue orthodontic plate 2">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770392_121.jpg" alt="Blue orthodontic plate 3">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770393_121.jpg" alt="Blue orthodontic plate 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770394_121.jpg" alt="Blue orthodontic plate 5">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770395_121.jpg" alt="Blue orthodontic plate 6">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770396_121.jpg" alt="Blue orthodontic plate 7">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770397_121.jpg" alt="Blue orthodontic plate 8">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770398_121.jpg" alt="Blue orthodontic plate 9">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770399_121.jpg" alt="Blue orthodontic plate 10">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770400_121.jpg" alt="Blue orthodontic plate 11">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770401_121.jpg" alt="Blue orthodontic plate 12">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770402_121.jpg" alt="Blue orthodontic plate 13">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770403_121.jpg" alt="Blue orthodontic plate 14">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770404_121.jpg" alt="Blue orthodontic plate 15">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770405_121.jpg" alt="Blue orthodontic plate 16">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770406_121.jpg" alt="Blue orthodontic plate 17">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770407_121.jpg" alt="Blue orthodontic plate 18">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5411572404444067221_121.jpg" alt="Blue orthodontic plate 19">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5411572404444067220_121.jpg" alt="Blue orthodontic plate 20">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5411572404444067219_121.jpg" alt="Pink orthodontic plate 3">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5411572404444067218_121.jpg" alt="Pink orthodontic plate 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770383_121.jpg" alt="New orthodontic plate 1">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770412_121.jpg" alt="New orthodontic plate 2">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770413_121.jpg" alt="New orthodontic plate 3">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770414_121.jpg" alt="New orthodontic plate 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770415_121.jpg" alt="New orthodontic plate 5">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770416_121.jpg" alt="New orthodontic plate 6">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770417_121.jpg" alt="New orthodontic plate 7">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770411_121.jpg" alt="New orthodontic plate 8">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770410_121.jpg" alt="New orthodontic plate 9">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770418_121.jpg" alt="New orthodontic plate 10">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770419_121.jpg" alt="New orthodontic plate 11">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770420_121.jpg" alt="New orthodontic plate 12">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770422_121.jpg" alt="New orthodontic plate 13">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770423_121.jpg" alt="New orthodontic plate 14">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770424_121.jpg" alt="New orthodontic plate 15">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770426_121.jpg" alt="New orthodontic plate 16">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770427_121.jpg" alt="New orthodontic plate 17">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770428_121.jpg" alt="New orthodontic plate 18">
+        </div>
+        <div class="gallery-item">
+            <img src="img/Orthodontics/5375330242039770429_121.jpg" alt="New orthodontic plate 19">
+        </div>
+    </div>
+</body>
+</html> 
