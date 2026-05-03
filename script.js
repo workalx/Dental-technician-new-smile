@@ -1,93 +1,100 @@
+/* =====================================================
+   DT.NEW SMILE — main scripts
+   ===================================================== */
+
 document.addEventListener('DOMContentLoaded', () => {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    const burgerIcon = document.querySelector('.burger-icon');
-    const menuButtons = document.querySelectorAll('.menu-btn');
-    const submenuButtons = document.querySelectorAll('.submenu-btn');
-    const infoTriggers = document.querySelectorAll('.info-trigger');
-    const menuLinks = document.querySelectorAll('.menu-content a');
-    
-    // Функціонал бургер-меню
-    burgerMenu.addEventListener('click', () => {
-        burgerIcon.classList.toggle('active');
-        menuOverlay.classList.toggle('active');
-    });
 
-    // Закриття меню при кліку поза ним
-    document.addEventListener('click', (e) => {
-        if (!menuOverlay.contains(e.target) && !burgerMenu.contains(e.target)) {
-            menuOverlay.classList.remove('active');
-            burgerIcon.classList.remove('active');
-        }
-    });
+    /* ---------- Header: shrink on scroll ---------- */
+    const header = document.getElementById('siteHeader');
+    if (header) {
+        const onScroll = () => {
+            if (window.scrollY > 30) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
 
-    // Функціонал акордеону для головного меню
-    menuButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
-            const isActive = content.classList.contains('active');
-
-            // Закриваємо всі активні меню
-            document.querySelectorAll('.menu-content').forEach(item => {
-                item.classList.remove('active');
-            });
-
-            // Знімаємо активний стан з усіх кнопок
-            menuButtons.forEach(btn => btn.classList.remove('active'));
-
-            // Якщо меню не було активним, відкриваємо його
-            if (!isActive) {
-                content.classList.add('active');
-                button.classList.add('active');
-            }
+    /* ---------- Mobile nav toggle ---------- */
+    const navToggle = document.getElementById('navToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    if (navToggle && primaryNav) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = primaryNav.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
         });
-    });
 
-    // Функціонал акордеону для підменю
-    submenuButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
-            const isActive = content.classList.contains('active');
+        // Close menu when a link is clicked
+        primaryNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                primaryNav.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
 
-            // Закриваємо всі активні підменю в поточному розділі
-            const currentSubmenu = button.closest('.menu-content');
-            currentSubmenu.querySelectorAll('.submenu-content').forEach(item => {
-                if (item !== content) {
-                    item.classList.remove('active');
+    /* ---------- Reveal on scroll ---------- */
+    const revealTargets = document.querySelectorAll(
+        '.section-head, .about-grid, .resume-col, .service-card, .portfolio-tile, .contact-card, .stat'
+    );
+    revealTargets.forEach(el => el.classList.add('reveal'));
+
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    io.unobserve(entry.target);
                 }
             });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealTargets.forEach(el => io.observe(el));
+    } else {
+        revealTargets.forEach(el => el.classList.add('visible'));
+    }
 
-            // Перемикаємо стан поточного підменю
-            content.classList.toggle('active');
+    /* ---------- Footer year ---------- */
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    /* ---------- Gallery lightbox (used on subpages) ---------- */
+    const galleryItems = document.querySelectorAll('.gallery .gallery-item img');
+    if (galleryItems.length) {
+        const lb = document.createElement('div');
+        lb.className = 'lightbox';
+        lb.innerHTML = `
+            <button class="lightbox-close" aria-label="Close">×</button>
+            <img alt="">
+        `;
+        document.body.appendChild(lb);
+
+        const lbImg = lb.querySelector('img');
+        const lbClose = lb.querySelector('.lightbox-close');
+
+        const open = (src, alt) => {
+            lbImg.src = src;
+            lbImg.alt = alt || '';
+            lb.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        };
+        const close = () => {
+            lb.classList.remove('open');
+            lbImg.src = '';
+            document.body.style.overflow = '';
+        };
+
+        galleryItems.forEach(img => {
+            img.parentElement.addEventListener('click', () => open(img.src, img.alt));
         });
-    });
 
-    // Функціонал інфо-блоків
-    infoTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
+        lb.addEventListener('click', e => {
+            if (e.target === lb || e.target === lbImg) close();
         });
-    });
-
-    // Закриття інфо-блоків при кліку поза ними
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.info-trigger') && !e.target.closest('.info-popup')) {
-            document.querySelectorAll('.info-popup').forEach(popup => {
-                popup.classList.remove('active');
-            });
-        }
-    });
-
-    // Обробка звичайних посилань
-    menuLinks.forEach(link => {
-        if (!link.classList.contains('info-trigger')) {
-            link.addEventListener('click', (e) => {
-                if (link.hasAttribute('target')) {
-                    // Якщо це зовнішнє посилання, дозволяємо перехід
-                    return true;
-                }
-            });
-        }
-    });
+        lbClose.addEventListener('click', close);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') close();
+        });
+    }
 });
