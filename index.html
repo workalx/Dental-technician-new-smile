@@ -3,64 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental technician new smile</title>
+    <meta name="description" content="Liudmyla Shyshyk — Dental Technician. Exocad CAD/CAM, orthodontic appliances, wax-up and full-anatomy dental work. Portfolio and services.">
+    <title>Liudmyla Shyshyk — Dental Technician | DT.New Smile</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-   <div class="main-container">
-        <div class="burger-menu">
-            <div class="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
 
-        <div class="menu-overlay">
-            <nav class="header">
-                <div class="menu-item">
-                    <button class="menu-btn">My Cases</button>
-                    <div class="menu-content">
-                        <a href="exocad.html">• Exocad</a>
-                        <a href="orthodontics.html">• Orthodontics</a>
-                        <a href="wax-up.html">• Wax-up</a>
-                        <a href="etc.html">• ECT</a>
-                    </div>
-                </div>
+    <!-- ================= HEADER / NAV ================= -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-wrapper">
+            <a href="#top" class="brand">
+                <span class="brand-mark">DT</span>
+                <span class="brand-name">New&nbsp;Smile</span>
+            </a>
 
-                <div class="menu-item">
-                    <button class="menu-btn">Contact</button>
-                    <div class="menu-content">
-                        <div class="submenu-item">
-                            <button class="submenu-btn">• Email</button>
-                            <div class="submenu-content">
-                                <p>shyshyk.lyuda@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <a href="https://www.instagram.com/dt.new.smile?igsh=cjVneDU5MDlreTFt" target="_blank">• Instagram</a>
-                        <a href="https://t.me/milashyshyk" target="_blank">• Telegram</a>
-                        <a href="https://wa.me/qr/INJ4KJBL5YSQP1" target="_blank" class="contact-link">• WhatsApp</a>
-                    </div>
-                </div>
+            <nav class="primary-nav" id="primaryNav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
-        </div>
 
-        <div class="content-area">
-            <div class="welcome-section">
-                <h2>Hey, and..</h2>
-                <h1>WELCOME</h1>
-                <div class="welcome-text">
-                    <p>My name is Liudmyla and I'm a dental technician.</p>
-                    <p>It's my little short portfolio here and I'm happy you're here.</p>
-                    <p>I love my job and achieving goals with a new useful experience.</p>
-                    <p>Innovations, development and mentorship is my passion same like the full anatomy of teeth.</p>
-                    <p>I would be happy to share professional experience and just to connect if you're up for it.</p>
-                    <p>My contacts you can find here as well.</p>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+            <p class="hero-eyebrow">Dental Technician · CAD/CAM · Mentor</p>
+            <h1 class="hero-title">
+                Liudmyla<br><span class="accent">Shyshyk</span>
+            </h1>
+            <p class="hero-subtitle">
+                Crafting precise, natural and beautiful dental work — from full digital design
+                to colourful orthodontic appliances and wax-up artistry.
+            </p>
+            <div class="hero-cta">
+                <a href="#services" class="btn btn-primary">Explore Services</a>
+                <a href="#portfolio" class="btn btn-ghost">View Portfolio</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-cue" aria-label="Scroll down">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="about">
+        <div class="container about-grid">
+            <div class="about-photo">
+                <div class="photo-frame">
+                    <div class="photo-placeholder">L</div>
+                </div>
+            </div>
+            <div class="about-text">
+                <p class="section-eyebrow">About Me</p>
+                <h2 class="section-title">Hey, I'm Liudmyla.</h2>
+                <p>
+                    I'm a dental technician passionate about precision, anatomy and the small details
+                    that make a smile feel natural. My work blends digital design with handcraft —
+                    from Exocad modelling to wax-up and finely tuned orthodontic appliances.
+                </p>
+                <p>
+                    I love what I do, and I'm always learning. Innovation, professional development
+                    and mentorship are a real passion of mine, just like the full anatomy of teeth.
+                    If you'd like to collaborate, learn together, or just connect — you're very welcome.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-label">Years of Practice</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">100+</span>
+                        <span class="stat-label">Cases Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">4</span>
+                        <span class="stat-label">Core Services</span>
+                    </div>
                 </div>
             </div>
         </div>
-   </div>
-   <script src="script.js" defer></script>
+    </section>
+
+    <!-- ================= RESUME ================= -->
+    <section class="section resume" id="resume">
+        <div class="container">
+            <div class="section-head center">
+                <p class="section-eyebrow">Resume</p>
+                <h2 class="section-title">Experience &amp; Skills</h2>
+                <p class="section-lede">A snapshot of my professional path and the tools I work with every day.</p>
+            </div>
+
+            <div class="resume-grid">
+                <!-- Experience -->
+                <div class="resume-col">
+                    <h3 class="resume-col-title"><span>01</span> Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-date">Present</span>
+                            <h4>Dental Technician — Private Practice</h4>
+                            <p>Designing and producing CAD/CAM restorations, orthodontic appliances and wax-up cases for clinics and private clients.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-date">Ongoing</span>
+                            <h4>Mentor &amp; Consultant</h4>
+                            <p>Sharing knowledge with junior technicians and students — workflow, anatomy and digital design fundamentals.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-date">Continuous</span>
+                            <h4>Professional Development</h4>
+                            <p>Regular courses, masterclasses and self-study in modern digital dentistry, materials and aesthetics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="resume-col">
+                    <h3 class="resume-col-title"><span>02</span> Skills</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-head"><span>Exocad CAD/CAM Design</span><span>Advanced</span></div>
+                            <div class="skill-bar"><i style="width:92%"></i></div>
+                        </li>
+                        <li>
+                            <div class="skill-head"><span>Orthodontic Appliances</span><span>Advanced</span></div>
+                            <div class="skill-bar"><i style="width:88%"></i></div>
+                        </li>
+                        <li>
+                            <div class="skill-head"><span>Wax-up &amp; Anatomy</span><span>Expert</span></div>
+                            <div class="skill-bar"><i style="width:95%"></i></div>
+                        </li>
+                        <li>
+                            <div class="skill-head"><span>Aesthetics &amp; Shade Match</span><span>Strong</span></div>
+                            <div class="skill-bar"><i style="width:85%"></i></div>
+                        </li>
+                        <li>
+                            <div class="skill-head"><span>Mentorship &amp; Communication</span><span>Strong</span></div>
+                            <div class="skill-bar"><i style="width:90%"></i></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-head center">
+                <p class="section-eyebrow">Services</p>
+                <h2 class="section-title">What I Offer</h2>
+                <p class="section-lede">A complete dental technician workflow — from digital design to handcrafted artistry.</p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/>
+                        </svg>
+                    </div>
+                    <h3>Exocad CAD/CAM Design</h3>
+                    <p>Digital design of crowns, bridges, abutments and full restorations using the Exocad workflow — precise, predictable and beautifully fitted.</p>
+                    <a href="exocad.html" class="service-link">View cases →</a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path d="M4 12c0-4 3.5-7 8-7s8 3 8 7-3.5 7-8 7-8-3-8-7z"/><path d="M9 11v2M12 10v4M15 11v2"/>
+                        </svg>
+                    </div>
+                    <h3>Orthodontic Appliances</h3>
+                    <p>Custom-made orthodontic plates in beautiful colour combinations — comfortable, durable and crafted to fit each patient perfectly.</p>
+                    <a href="orthodontics.html" class="service-link">View cases →</a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path d="M12 3c2 3 5 4 5 8a5 5 0 1 1-10 0c0-4 3-5 5-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Wax-up &amp; Diagnostic Modelling</h3>
+                    <p>Detailed diagnostic wax-ups for restorative planning — full anatomy, natural shape, and a clear preview of the final result.</p>
+                    <a href="wax-up.html" class="service-link">View cases →</a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>
+                        </svg>
+                    </div>
+                    <h3>Mentorship &amp; Consultations</h3>
+                    <p>One-to-one guidance for dental technicians and students — workflow improvements, digital design fundamentals and case reviews.</p>
+                    <a href="#contact" class="service-link">Get in touch →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PORTFOLIO PREVIEW ================= -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-head center">
+                <p class="section-eyebrow">Portfolio</p>
+                <h2 class="section-title">Selected Cases</h2>
+                <p class="section-lede">Explore the galleries grouped by service area.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <a href="exocad.html" class="portfolio-tile">
+                    <div class="tile-image" style="background-image:url('img/Exocad/5375330242039770460_121.jpg')"></div>
+                    <div class="tile-overlay">
+                        <h3>Exocad</h3>
+                        <span>Open gallery →</span>
+                    </div>
+                </a>
+                <a href="orthodontics.html" class="portfolio-tile">
+                    <div class="tile-image" style="background-image:url('img/Orthodontics/5375330242039770408_121.jpg')"></div>
+                    <div class="tile-overlay">
+                        <h3>Orthodontics</h3>
+                        <span>Open gallery →</span>
+                    </div>
+                </a>
+                <a href="wax-up.html" class="portfolio-tile">
+                    <div class="tile-image" style="background-image:url('img/Wax-up/5375330242039770448_121.jpg')"></div>
+                    <div class="tile-overlay">
+                        <h3>Wax-up</h3>
+                        <span>Open gallery →</span>
+                    </div>
+                </a>
+                <a href="etc.html" class="portfolio-tile">
+                    <div class="tile-image" style="background-image:url('img/etc/5375330242039770461_121.jpg')"></div>
+                    <div class="tile-overlay">
+                        <h3>Other Works</h3>
+                        <span>Open gallery →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+        <div class="container contact-inner">
+            <div class="section-head center">
+                <p class="section-eyebrow">Contact</p>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-lede">Got a project, a question, or want to collaborate? Reach out — I'd love to hear from you.</p>
+            </div>
+
+            <div class="contact-grid">
+                <a class="contact-card" href="mailto:shyshyk.lyuda@gmail.com">
+                    <span class="contact-ico">✉</span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">shyshyk.lyuda@gmail.com</span>
+                </a>
+                <a class="contact-card" href="https://www.instagram.com/dt.new.smile?igsh=cjVneDU5MDlreTFt" target="_blank" rel="noopener">
+                    <span class="contact-ico">◎</span>
+                    <span class="contact-label">Instagram</span>
+                    <span class="contact-value">@dt.new.smile</span>
+                </a>
+                <a class="contact-card" href="https://t.me/milashyshyk" target="_blank" rel="noopener">
+                    <span class="contact-ico">✈</span>
+                    <span class="contact-label">Telegram</span>
+                    <span class="contact-value">@milashyshyk</span>
+                </a>
+                <a class="contact-card" href="https://wa.me/qr/INJ4KJBL5YSQP1" target="_blank" rel="noopener">
+                    <span class="contact-ico">☎</span>
+                    <span class="contact-label">WhatsApp</span>
+                    <span class="contact-value">Message me</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Liudmyla Shyshyk · DT.New Smile · Dental Technician</p>
+            <p class="footer-meta">Crafted with care.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
